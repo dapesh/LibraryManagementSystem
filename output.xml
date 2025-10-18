@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-18T13:57:11.787962" rpa="false" schemaversion="5">
+<suite id="s1" name="Add Book Student" source="C:\Users\Dipesh\Desktop\Library Management System\LibraryManagementSystem\add_book_student.robot">
+<kw name="Login To Dashboard" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:12.109457" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000/stafflogin/'.</msg>
+<arg>${BASE_URL}/stafflogin/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:12.109079" elapsed="1.824220"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:13.934649" level="INFO">Typing text 'Dipesh' into text field 'id:loginuname'.</msg>
+<arg>id:loginuname</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:13.933742" elapsed="0.203137"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:14.138082" level="INFO">Typing text 'GairidharaNP@1' into text field 'id:loginpassword'.</msg>
+<arg>id:loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:14.137398" elapsed="0.168369"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:14.306520" level="INFO">Clicking button 'xpath=//input[@type="submit" and @value="Login"]'.</msg>
+<arg>xpath=//input[@type="submit" and @value="Login"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:14.306022" elapsed="1.176862"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:15.483301" elapsed="0.042252"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:12.108143" elapsed="3.417568"/>
+</kw>
+<test id="s1-t1" name="TC_LIB_01: Verify adding a new book" line="110">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:15.526863" elapsed="0.002104"/>
+</kw>
+<kw name="Add Book">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:15.530938" level="INFO">Opening url 'http://127.0.0.1:8000/addbook/'</msg>
+<arg>${BASE_URL}/addbook/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:15.530730" elapsed="0.142658"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Book</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:15.673743" elapsed="0.029523"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:15.703971" level="INFO">Typing text 'B101' into text field 'name:bookid'.</msg>
+<arg>name:bookid</arg>
+<arg>${book_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:15.703561" elapsed="0.108226"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:15.812767" level="INFO">Typing text 'Python Basics' into text field 'name:bookname'.</msg>
+<arg>name:bookname</arg>
+<arg>${book_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:15.812255" elapsed="0.122949"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:15.935894" level="INFO">Typing text 'CS' into text field 'name:subject'.</msg>
+<arg>name:subject</arg>
+<arg>${subject}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:15.935514" elapsed="0.095945"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:16.031967" level="INFO">Typing text 'Not-Issued' into text field 'name:category'.</msg>
+<arg>name:category</arg>
+<arg>${category}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:16.031672" elapsed="0.117805"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:16.150340" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:16.149963" elapsed="0.145183"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:21.468528" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:21.468712" level="FAIL">Location did not contain '/dashboard/' in 5 seconds.</msg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2025-10-18T13:57:16.295949" elapsed="5.175185">Location did not contain '/dashboard/' in 5 seconds.</status>
+</kw>
+<arg>Wait Until Location Contains</arg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:16.295530" elapsed="5.175706"/>
+</kw>
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:21.471784" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.471655" elapsed="0.048662"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.520621" elapsed="0.015199"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:21.471399" elapsed="0.064632"/>
+</kw>
+<arg>${BOOK_ID}</arg>
+<arg>${BOOK_NAME}</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:15.530069" elapsed="6.006078"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:21.537434" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.537258" elapsed="0.036597"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.574120" elapsed="0.018425"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:21.537043" elapsed="0.055626"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.593571" elapsed="0.014052"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.593001" elapsed="0.014791"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:21.621996" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.608203" elapsed="0.013881"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:21.622280" elapsed="0.000095"/>
+</return>
+<msg time="2025-10-18T13:57:21.622638" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${BOOK_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:21.536648" elapsed="0.086026"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt;= 1</arg>
+<arg>msg=Book not visible after add</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.623071" elapsed="0.000578"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:21.751547" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.623996" elapsed="0.127660"/>
+</kw>
+<doc>Log in → Add Book (B101) → Verify on dashboard</doc>
+<status status="PASS" start="2025-10-18T13:57:15.525856" elapsed="6.226100"/>
+</test>
+<test id="s1-t2" name="TC_LIB_02: Verify adding a book with missing fields" line="116">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.753119" elapsed="0.001020"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:21.754493" level="INFO">Opening url 'http://127.0.0.1:8000/addbook/'</msg>
+<arg>${BASE_URL}/addbook/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.754345" elapsed="0.049195"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Book</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.804398" elapsed="0.011574"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:21.816782" level="INFO">Typing text 'B102' into text field 'name:bookid'.</msg>
+<arg>name:bookid</arg>
+<arg>${BOOK_ID_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.816384" elapsed="0.153267"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:21.971102" level="INFO">Typing text '' into text field 'name:bookname'.</msg>
+<arg>name:bookname</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:21.970090" elapsed="0.164714"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:22.135686" level="INFO">Typing text 'Math' into text field 'name:subject'.</msg>
+<arg>name:subject</arg>
+<arg>Math</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:22.135327" elapsed="0.151385"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:22.287937" level="INFO">Typing text 'Not-Issued' into text field 'name:category'.</msg>
+<arg>name:category</arg>
+<arg>Not-Issued</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:22.287499" elapsed="0.155355"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:22.443606" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:22.443330" elapsed="0.122266"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-18T13:57:23.066637" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-18T13:57:22.566036" elapsed="0.500721"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:25.930133" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:25.930301" level="FAIL">Text 'All fields required' did not appear in 2 seconds.</msg>
+<arg>${MSG_REQUIRED}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-18T13:57:23.067516" elapsed="2.863975">Text 'All fields required' did not appear in 2 seconds.</status>
+</kw>
+<msg time="2025-10-18T13:57:25.931670" level="INFO">${seen} = False</msg>
+<var>${seen}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>${MSG_REQUIRED}</arg>
+<arg>2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-18T13:57:23.067267" elapsed="2.864437"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:25.938658" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:25.938422" elapsed="0.069689"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.009424" elapsed="0.013208"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:25.932665" elapsed="0.090203"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.023468" elapsed="0.009300"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.023150" elapsed="0.009825"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.049920" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.033248" elapsed="0.016763"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:26.050137" elapsed="0.000097"/>
+</return>
+<msg time="2025-10-18T13:57:26.050526" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${BOOK_ID_2}</arg>
+<status status="PASS" start="2025-10-18T13:57:25.932272" elapsed="0.118293"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${seen} or ${count} == 0</arg>
+<arg>msg=Empty book name was accepted (count=${count})</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.050918" elapsed="0.000553"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:26.191261" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.051939" elapsed="0.139568"/>
+</kw>
+<doc>Leave Book Name empty for B102 → Expect required validation OR no row</doc>
+<status status="PASS" start="2025-10-18T13:57:21.752625" elapsed="4.441648"/>
+</test>
+<test id="s1-t3" name="TC_LIB_03: Verify duplicate Book ID restriction" line="131">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.196771" elapsed="0.002327"/>
+</kw>
+<kw name="Ensure Book Listed">
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.202888" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.202494" elapsed="0.057807"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.260719" elapsed="0.013213"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:26.201774" elapsed="0.072307"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.274636" elapsed="0.013846"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.274293" elapsed="0.014322"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.298209" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.288789" elapsed="0.009518"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:26.298437" elapsed="0.000060"/>
+</return>
+<msg time="2025-10-18T13:57:26.298718" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${book_id}</arg>
+<status status="PASS" start="2025-10-18T13:57:26.201095" elapsed="0.097691"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${count} == 0</arg>
+<arg>Add Book</arg>
+<arg>${book_id}</arg>
+<arg>${book_name}</arg>
+<arg>${subject}</arg>
+<arg>${category}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.299073" elapsed="0.000469"/>
+</kw>
+<arg>${BOOK_ID}</arg>
+<arg>${BOOK_NAME}</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:26.199803" elapsed="0.099939"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.301546" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.301345" elapsed="0.054615"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.356312" elapsed="0.024697"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:26.301034" elapsed="0.080115"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.381534" elapsed="0.008129"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.381332" elapsed="0.008569"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.408056" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.390238" elapsed="0.017905"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:26.408382" elapsed="0.000206"/>
+</return>
+<msg time="2025-10-18T13:57:26.409335" level="INFO">${before} = 1</msg>
+<var>${before}</var>
+<arg>${BOOK_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:26.300307" elapsed="0.109177"/>
+</kw>
+<kw name="Add Book">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.411994" level="INFO">Opening url 'http://127.0.0.1:8000/addbook/'</msg>
+<arg>${BASE_URL}/addbook/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.411685" elapsed="0.023070"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Book</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.435532" elapsed="0.054641"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.490747" level="INFO">Typing text 'B101' into text field 'name:bookid'.</msg>
+<arg>name:bookid</arg>
+<arg>${book_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.490428" elapsed="0.148532"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.639741" level="INFO">Typing text 'Python Basics' into text field 'name:bookname'.</msg>
+<arg>name:bookname</arg>
+<arg>${book_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.639327" elapsed="0.147616"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.787733" level="INFO">Typing text 'CS' into text field 'name:subject'.</msg>
+<arg>name:subject</arg>
+<arg>${subject}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.787267" elapsed="0.128688"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:26.917036" level="INFO">Typing text 'Not-Issued' into text field 'name:category'.</msg>
+<arg>name:category</arg>
+<arg>${category}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:26.916398" elapsed="0.174590"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:27.091444" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:27.091198" elapsed="0.142949"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:32.458329" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:32.458462" level="FAIL">Location did not contain '/dashboard/' in 5 seconds.</msg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2025-10-18T13:57:27.235103" elapsed="5.224383">Location did not contain '/dashboard/' in 5 seconds.</status>
+</kw>
+<arg>Wait Until Location Contains</arg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:27.234682" elapsed="5.224902"/>
+</kw>
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:32.460106" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:32.459979" elapsed="0.039052"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:32.499395" elapsed="0.012330"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:32.459742" elapsed="0.052117"/>
+</kw>
+<arg>${BOOK_ID}</arg>
+<arg>${BOOK_NAME}</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:26.410861" elapsed="6.101079"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:34.815063" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:34.815265" level="FAIL">Text 'Book already exists' did not appear in 2 seconds.</msg>
+<arg>${MSG_DUP_BOOK}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-18T13:57:32.512545" elapsed="2.303998">Text 'Book already exists' did not appear in 2 seconds.</status>
+</kw>
+<msg time="2025-10-18T13:57:34.816701" level="INFO">${dup_seen} = False</msg>
+<var>${dup_seen}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>${MSG_DUP_BOOK}</arg>
+<arg>2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-18T13:57:32.512324" elapsed="2.304411"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:34.818221" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:34.818082" elapsed="0.033658"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:34.851935" elapsed="0.012143"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:34.817790" elapsed="0.046497"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:34.864641" elapsed="0.008118"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:34.864447" elapsed="0.008583"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:34.883318" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:34.873408" elapsed="0.009961"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:34.883456" elapsed="0.000049"/>
+</return>
+<msg time="2025-10-18T13:57:34.883675" level="INFO">${after} = 2</msg>
+<var>${after}</var>
+<arg>${BOOK_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:34.817264" elapsed="0.066442"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2025-10-18T13:57:34.884645" level="FAIL">Duplicate created (before=1, after=2)</msg>
+<arg>${dup_seen} or ${after} == ${before}</arg>
+<arg>msg=Duplicate created (before=${before}, after=${after})</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2025-10-18T13:57:34.884042" elapsed="0.000724">Duplicate created (before=1, after=2)</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:35.002543" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:34.885293" elapsed="0.117376"/>
+</kw>
+<doc>Try adding B101 again → Expect duplicate rejected (count stays 1 or dup message)</doc>
+<status status="FAIL" start="2025-10-18T13:57:26.195327" elapsed="8.807599">Duplicate created (before=1, after=2)</status>
+</test>
+<test id="s1-t4" name="TC_LIB_04: Verify student registration" line="140">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.004031" elapsed="0.001180"/>
+</kw>
+<kw name="Add Student">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.006093" level="INFO">Opening url 'http://127.0.0.1:8000/addstudent/'</msg>
+<arg>${BASE_URL}/addstudent/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.005964" elapsed="0.056753"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Student</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.062922" elapsed="0.016239"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.079906" level="INFO">Typing text 'Dipesh Wagle' into text field 'name:sname'.</msg>
+<arg>name:sname</arg>
+<arg>${student_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.079471" elapsed="0.135397"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.215838" level="INFO">Typing text 'S001' into text field 'name:studentid'.</msg>
+<arg>name:studentid</arg>
+<arg>${student_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.215182" elapsed="0.120742"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.336387" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.336137" elapsed="0.117589"/>
+</kw>
+<arg>${STUDENT_NAME}</arg>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:35.005627" elapsed="0.448296"/>
+</kw>
+<kw name="Student Count">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.456614" level="INFO">Opening url 'http://127.0.0.1:8000/viewstudents/'</msg>
+<arg>${BASE_URL}/viewstudents/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.455694" elapsed="0.089884"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.545929" elapsed="0.009527"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.567060" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${student_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.555642" elapsed="0.011527"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:35.567274" elapsed="0.000052"/>
+</return>
+<msg time="2025-10-18T13:57:35.567492" level="INFO">${scount} = 1</msg>
+<var>${scount}</var>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:35.454870" elapsed="0.112657"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${scount} &gt;= 1</arg>
+<arg>msg=Student not visible after add</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.567935" elapsed="0.000597"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:35.685410" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.568919" elapsed="0.116603"/>
+</kw>
+<doc>Add Student (S001 / Dipesh Wagle) → Verify in list</doc>
+<status status="PASS" start="2025-10-18T13:57:35.003542" elapsed="0.682227"/>
+</test>
+<test id="s1-t5" name="TC_LIB_05: Verify duplicate student registration restriction" line="146">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.687120" elapsed="0.001090"/>
+</kw>
+<kw name="Ensure Student Listed">
+<kw name="Student Count">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.689223" level="INFO">Opening url 'http://127.0.0.1:8000/viewstudents/'</msg>
+<arg>${BASE_URL}/viewstudents/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.689087" elapsed="0.042521"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.732466" elapsed="0.009502"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.753306" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${student_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.742285" elapsed="0.011086"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:35.753583" elapsed="0.000060"/>
+</return>
+<msg time="2025-10-18T13:57:35.753874" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${student_id}</arg>
+<status status="PASS" start="2025-10-18T13:57:35.688838" elapsed="0.065069"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${count} == 0</arg>
+<arg>Run Keywords</arg>
+<arg>Add Student</arg>
+<arg>${student_name}</arg>
+<arg>${student_id}</arg>
+<arg>AND</arg>
+<arg>Wait Until Page Contains</arg>
+<arg>${student_id}</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.754102" elapsed="0.000243"/>
+</kw>
+<arg>${STUDENT_NAME}</arg>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:35.688486" elapsed="0.065960"/>
+</kw>
+<kw name="Student Count">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.755506" level="INFO">Opening url 'http://127.0.0.1:8000/viewstudents/'</msg>
+<arg>${BASE_URL}/viewstudents/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.755311" elapsed="0.032661"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.788140" elapsed="0.016962"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.816391" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${student_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.805304" elapsed="0.011149"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:35.816551" elapsed="0.000054"/>
+</return>
+<msg time="2025-10-18T13:57:35.816838" level="INFO">${s_before} = 1</msg>
+<var>${s_before}</var>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:35.754927" elapsed="0.061953"/>
+</kw>
+<kw name="Add Student">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.818556" level="INFO">Opening url 'http://127.0.0.1:8000/addstudent/'</msg>
+<arg>${BASE_URL}/addstudent/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.818272" elapsed="0.052624"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Student</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.871185" elapsed="0.010712"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:35.882359" level="INFO">Typing text 'Dipesh Wagle' into text field 'name:sname'.</msg>
+<arg>name:sname</arg>
+<arg>${student_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:35.882084" elapsed="0.171468"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:36.054347" level="INFO">Typing text 'S001' into text field 'name:studentid'.</msg>
+<arg>name:studentid</arg>
+<arg>${student_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:36.053899" elapsed="0.128054"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:36.182375" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:36.182169" elapsed="0.121492"/>
+</kw>
+<arg>${STUDENT_NAME}</arg>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:35.817524" elapsed="0.486357"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.072957" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:39.073087" level="FAIL">Text 'Student already exists' did not appear in 2 seconds.</msg>
+<arg>${MSG_DUP_STU}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-18T13:57:36.304904" elapsed="2.769195">Text 'Student already exists' did not appear in 2 seconds.</status>
+</kw>
+<msg time="2025-10-18T13:57:39.074237" level="INFO">${dup_s_seen} = False</msg>
+<var>${dup_s_seen}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>${MSG_DUP_STU}</arg>
+<arg>2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-18T13:57:36.304533" elapsed="2.769733"/>
+</kw>
+<kw name="Student Count">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.075232" level="INFO">Opening url 'http://127.0.0.1:8000/viewstudents/'</msg>
+<arg>${BASE_URL}/viewstudents/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.075087" elapsed="0.041516"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.116939" elapsed="0.013720"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.139580" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${student_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.130859" elapsed="0.008785"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:39.139843" elapsed="0.000084"/>
+</return>
+<msg time="2025-10-18T13:57:39.140162" level="INFO">${s_after} = 2</msg>
+<var>${s_after}</var>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:39.074739" elapsed="0.065460"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2025-10-18T13:57:39.142049" level="FAIL">Duplicate student created (before=1, after=2)</msg>
+<arg>${dup_s_seen} or ${s_after} == ${s_before}</arg>
+<arg>msg=Duplicate student created (before=${s_before}, after=${s_after})</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2025-10-18T13:57:39.140656" elapsed="0.001682">Duplicate student created (before=1, after=2)</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:39.266594" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.143033" elapsed="0.123756"/>
+</kw>
+<doc>Try adding S001 again → Expect duplicate rejected (count stays 1 or dup message)</doc>
+<status status="FAIL" start="2025-10-18T13:57:35.686326" elapsed="3.580705">Duplicate student created (before=1, after=2)</status>
+</test>
+<test id="s1-t6" name="TC_LIB_06: Verify book search by ID" line="155">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.268341" elapsed="0.001113"/>
+</kw>
+<kw name="Ensure Book Listed">
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.270893" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.270748" elapsed="0.064561"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.335535" elapsed="0.016065"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:39.270524" elapsed="0.081192"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.352125" elapsed="0.013643"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.351913" elapsed="0.014002"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.374701" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.366089" elapsed="0.008665"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:39.374850" elapsed="0.000050"/>
+</return>
+<msg time="2025-10-18T13:57:39.375112" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${book_id}</arg>
+<status status="PASS" start="2025-10-18T13:57:39.270223" elapsed="0.104953"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${count} == 0</arg>
+<arg>Add Book</arg>
+<arg>${book_id}</arg>
+<arg>${book_name}</arg>
+<arg>${subject}</arg>
+<arg>${category}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.375392" elapsed="0.000249"/>
+</kw>
+<arg>${BOOK_ID}</arg>
+<arg>${BOOK_NAME}</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:39.269718" elapsed="0.106034"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.376351" level="INFO">Opening url 'http://127.0.0.1:8000/Search/?query2=B101'</msg>
+<arg>${BASE_URL}/Search/?query2=${BOOK_ID}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.376053" elapsed="0.051270"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${BOOK_ID}</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.427960" elapsed="0.020714"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:39.572737" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.449250" elapsed="0.123630"/>
+</kw>
+<doc>Search query for B101 should show matching record</doc>
+<status status="PASS" start="2025-10-18T13:57:39.267910" elapsed="0.305216"/>
+</test>
+<test id="s1-t7" name="TC_LIB_07: Verify dashboard reflects added book and status" line="161">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.574362" elapsed="0.001162"/>
+</kw>
+<kw name="Ensure Book Listed">
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.576952" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.576794" elapsed="0.067041"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.644131" elapsed="0.014316"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:39.576599" elapsed="0.082115"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.659257" elapsed="0.013140"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.658871" elapsed="0.013713"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.686621" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.672855" elapsed="0.013814"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:39.686761" elapsed="0.000052"/>
+</return>
+<msg time="2025-10-18T13:57:39.686986" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${book_id}</arg>
+<status status="PASS" start="2025-10-18T13:57:39.576333" elapsed="0.110684"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${count} == 0</arg>
+<arg>Add Book</arg>
+<arg>${book_id}</arg>
+<arg>${book_name}</arg>
+<arg>${subject}</arg>
+<arg>${category}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.687164" elapsed="0.000217"/>
+</kw>
+<arg>${BOOK_ID}</arg>
+<arg>${BOOK_NAME}</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:39.575905" elapsed="0.111572"/>
+</kw>
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.688730" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.688367" elapsed="0.041376"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.730229" elapsed="0.016514"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:39.687965" elapsed="0.059003"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.766432" level="INFO">Current page contains text 'B101'.</msg>
+<arg>${BOOK_ID}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.747458" elapsed="0.019121"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:39.899668" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.767063" elapsed="0.132751"/>
+</kw>
+<doc>Dashboard shows recently added book (B101) and its status</doc>
+<status status="PASS" start="2025-10-18T13:57:39.573702" elapsed="0.326396"/>
+</test>
+<test id="s1-t8" name="TC_LIB_08: Verify View Student reflects added student records" line="169">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.901209" elapsed="0.001308"/>
+</kw>
+<kw name="Ensure Student Listed">
+<kw name="Student Count">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:39.904305" level="INFO">Opening url 'http://127.0.0.1:8000/viewstudents/'</msg>
+<arg>${BASE_URL}/viewstudents/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:39.903959" elapsed="0.110963"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.015281" elapsed="0.023364"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.049603" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${student_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.039023" elapsed="0.010674"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:40.049876" elapsed="0.000087"/>
+</return>
+<msg time="2025-10-18T13:57:40.050269" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${student_id}</arg>
+<status status="PASS" start="2025-10-18T13:57:39.903314" elapsed="0.147011"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${count} == 0</arg>
+<arg>Run Keywords</arg>
+<arg>Add Student</arg>
+<arg>${student_name}</arg>
+<arg>${student_id}</arg>
+<arg>AND</arg>
+<arg>Wait Until Page Contains</arg>
+<arg>${student_id}</arg>
+<arg>10s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.050569" elapsed="0.000381"/>
+</kw>
+<arg>${STUDENT_NAME}</arg>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:39.902860" elapsed="0.148305"/>
+</kw>
+<kw name="Student Count">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.052302" level="INFO">Opening url 'http://127.0.0.1:8000/viewstudents/'</msg>
+<arg>${BASE_URL}/viewstudents/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.052114" elapsed="0.054179"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.106713" elapsed="0.010089"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.132126" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${student_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.117149" elapsed="0.015025"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:40.132265" elapsed="0.000051"/>
+</return>
+<msg time="2025-10-18T13:57:40.132487" level="INFO">${scount} = 2</msg>
+<var>${scount}</var>
+<arg>${STUDENT_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:40.051700" elapsed="0.080819"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${scount} &gt;= 1</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.132986" elapsed="0.000337"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:40.249440" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.133624" elapsed="0.115980"/>
+</kw>
+<doc>View Students shows S001 (Dipesh Wagle)</doc>
+<status status="PASS" start="2025-10-18T13:57:39.900686" elapsed="0.349186"/>
+</test>
+<test id="s1-t9" name="TC_LIB_09: Verify validation for empty Book Name (Negative)" line="175">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.251793" elapsed="0.002054"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.255067" level="INFO">Opening url 'http://127.0.0.1:8000/addbook/'</msg>
+<arg>${BASE_URL}/addbook/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.254474" elapsed="0.054996"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Book</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.310365" elapsed="0.016554"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.328325" level="INFO">Typing text 'B103' into text field 'name:bookid'.</msg>
+<arg>name:bookid</arg>
+<arg>${BOOK_ID_3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.327723" elapsed="0.121737"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.450786" level="INFO">Typing text '' into text field 'name:bookname'.</msg>
+<arg>name:bookname</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.449882" elapsed="0.118140"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.568836" level="INFO">Typing text 'CS' into text field 'name:subject'.</msg>
+<arg>name:subject</arg>
+<arg>CS</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.568472" elapsed="0.103626"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.673244" level="INFO">Typing text 'Not-Issued' into text field 'name:category'.</msg>
+<arg>name:category</arg>
+<arg>Not-Issued</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.672805" elapsed="0.128025"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:40.801513" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.801273" elapsed="0.116059"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-18T13:57:41.418702" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-18T13:57:40.918144" elapsed="0.500710"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:44.399531" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:44.399695" level="FAIL">Text 'All fields required' did not appear in 2 seconds.</msg>
+<arg>${MSG_REQUIRED}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-18T13:57:41.419678" elapsed="2.981138">Text 'All fields required' did not appear in 2 seconds.</status>
+</kw>
+<msg time="2025-10-18T13:57:44.400956" level="INFO">${seen} = False</msg>
+<var>${seen}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>${MSG_REQUIRED}</arg>
+<arg>2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-18T13:57:41.419480" elapsed="2.981508"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:44.402819" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.402203" elapsed="0.055804"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.458503" elapsed="0.014806"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:44.401955" elapsed="0.071522"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.473889" elapsed="0.009339"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.473684" elapsed="0.009673"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:44.501995" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.483507" elapsed="0.018538"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:44.502152" elapsed="0.000051"/>
+</return>
+<msg time="2025-10-18T13:57:44.502431" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${BOOK_ID_3}</arg>
+<status status="PASS" start="2025-10-18T13:57:44.401498" elapsed="0.100979"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${seen} or ${count} == 0</arg>
+<arg>msg=Empty book name was accepted (count=${count})</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.502824" elapsed="0.000713"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:44.633052" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.504414" elapsed="0.128810"/>
+</kw>
+<doc>Leave Book Name empty for B103 → Expect required validation OR no row</doc>
+<status status="PASS" start="2025-10-18T13:57:40.250540" elapsed="4.382992"/>
+</test>
+<test id="s1-t10" name="TC_LIB_10: Verify invalid Book ID format (Negative)" line="189">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.635528" elapsed="0.001571"/>
+</kw>
+<kw name="Add Book">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:44.638752" level="INFO">Opening url 'http://127.0.0.1:8000/addbook/'</msg>
+<arg>${BASE_URL}/addbook/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.638435" elapsed="0.048332"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Book</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.687435" elapsed="0.013893"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:44.702035" level="INFO">Typing text '@@B105' into text field 'name:bookid'.</msg>
+<arg>name:bookid</arg>
+<arg>${book_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.701616" elapsed="0.124833"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:44.826934" level="INFO">Typing text 'Mathematics' into text field 'name:bookname'.</msg>
+<arg>name:bookname</arg>
+<arg>${book_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.826650" elapsed="0.107390"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:44.934633" level="INFO">Typing text 'CS' into text field 'name:subject'.</msg>
+<arg>name:subject</arg>
+<arg>${subject}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:44.934331" elapsed="0.113564"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:45.048535" level="INFO">Typing text 'Not-Issued' into text field 'name:category'.</msg>
+<arg>name:category</arg>
+<arg>${category}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:45.048169" elapsed="0.127025"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:45.175583" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:45.175381" elapsed="0.131878"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:50.596201" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:50.596340" level="FAIL">Location did not contain '/dashboard/' in 5 seconds.</msg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2025-10-18T13:57:45.307925" elapsed="5.289522">Location did not contain '/dashboard/' in 5 seconds.</status>
+</kw>
+<arg>Wait Until Location Contains</arg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:45.307596" elapsed="5.289958"/>
+</kw>
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:50.598126" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:50.597958" elapsed="0.056742"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:50.655302" elapsed="0.012723"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:50.597724" elapsed="0.070421"/>
+</kw>
+<arg>${BOOK_ID_INVALID}</arg>
+<arg>Mathematics</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:44.637710" elapsed="6.030503"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-18T13:57:51.169403" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-18T13:57:50.668607" elapsed="0.501327"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:53.504243" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:53.504392" level="FAIL">Text 'Invalid Book ID' did not appear in 2 seconds.</msg>
+<arg>${MSG_INVALID_BOOK}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-18T13:57:51.172068" elapsed="2.333324">Text 'Invalid Book ID' did not appear in 2 seconds.</status>
+</kw>
+<msg time="2025-10-18T13:57:53.505526" level="INFO">${seen} = False</msg>
+<var>${seen}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>${MSG_INVALID_BOOK}</arg>
+<arg>2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-18T13:57:51.171193" elapsed="2.334361"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:53.506585" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.506461" elapsed="0.036677"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.543318" elapsed="0.008262"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:53.506271" elapsed="0.045455"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.552264" elapsed="0.014432"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.552031" elapsed="0.014784"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:53.580160" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.566974" elapsed="0.013234"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:53.580298" elapsed="0.000051"/>
+</return>
+<msg time="2025-10-18T13:57:53.580505" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${BOOK_ID_INVALID}</arg>
+<status status="PASS" start="2025-10-18T13:57:53.505965" elapsed="0.074572"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2025-10-18T13:57:53.581396" level="FAIL">Invalid Book ID was accepted (count=1)</msg>
+<arg>${seen} or ${count} == 0</arg>
+<arg>msg=Invalid Book ID was accepted (count=${count})</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2025-10-18T13:57:53.580872" elapsed="0.000628">Invalid Book ID was accepted (count=1)</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:53.701717" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.581954" elapsed="0.119972"/>
+</kw>
+<doc>Enter @@B105 → Expect invalid format rejected OR no row</doc>
+<status status="FAIL" start="2025-10-18T13:57:44.634462" elapsed="9.067745">Invalid Book ID was accepted (count=1)</status>
+</test>
+<test id="s1-t11" name="TC_LIB_11: Verify unauthorized Add Book access (Negative)" line="197">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.703788" elapsed="0.001397"/>
+</kw>
+<kw name="Get Browser Id">
+<msg time="2025-10-18T13:57:53.707291" level="FAIL">No keyword with name 'Get Browser Id' found. Did you mean:
+    SeleniumLibrary.Get Browser Ids</msg>
+<var>${orig}</var>
+<status status="FAIL" start="2025-10-18T13:57:53.707238" elapsed="0.000104">No keyword with name 'Get Browser Id' found. Did you mean:
+    SeleniumLibrary.Get Browser Ids</status>
+</kw>
+<kw name="Open Temp Browser">
+<var>${h}</var>
+<arg>${BASE_URL}/addbook/</arg>
+<status status="NOT RUN" start="2025-10-18T13:57:53.707704" elapsed="0.000046"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-18T13:57:53.707993" elapsed="0.000040"/>
+</kw>
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>${h}</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="NOT RUN" start="2025-10-18T13:57:53.708261" elapsed="0.000041"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-10-18T13:57:53.708505" elapsed="0.000037"/>
+</kw>
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>${orig}</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="NOT RUN" start="2025-10-18T13:57:53.708754" elapsed="0.000038"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:53.826053" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.709144" elapsed="0.117024"/>
+</kw>
+<doc>Without login, open /addbook in a new session → Expect redirect to login</doc>
+<status status="FAIL" start="2025-10-18T13:57:53.703030" elapsed="0.123448">No keyword with name 'Get Browser Id' found. Did you mean:
+    SeleniumLibrary.Get Browser Ids</status>
+</test>
+<test id="s1-t12" name="TC_LIB_12: Verify long Student ID handling (Edge Case)" line="207">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.827941" elapsed="0.001124"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:53.829444" level="INFO">Opening url 'http://127.0.0.1:8000/addstudent/'</msg>
+<arg>${BASE_URL}/addstudent/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.829276" elapsed="0.051762"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Student</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.881587" elapsed="0.011167"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:53.893385" level="INFO">Typing text 'Ramesh' into text field 'name:sname'.</msg>
+<arg>name:sname</arg>
+<arg>${STUDENT_NAME_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:53.893060" elapsed="0.142538"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:54.037250" level="INFO">Typing text 'S0000000000000000000000000' into text field 'name:studentid'.</msg>
+<arg>name:studentid</arg>
+<arg>S0000000000000000000000000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:54.036510" elapsed="0.193943"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:54.231108" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:54.230792" elapsed="0.129766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-18T13:57:54.862246" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-18T13:57:54.361183" elapsed="0.501174"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:57.640118" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:57:57.640290" level="FAIL">Text 'Invalid ID length' did not appear in 2 seconds.</msg>
+<arg>${MSG_LENGTH_ERR}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-18T13:57:54.863078" elapsed="2.778253">Text 'Invalid ID length' did not appear in 2 seconds.</status>
+</kw>
+<msg time="2025-10-18T13:57:57.641468" level="INFO">${seen} = False</msg>
+<var>${seen}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>${MSG_LENGTH_ERR}</arg>
+<arg>2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-18T13:57:54.862824" elapsed="2.778674"/>
+</kw>
+<kw name="Student Count">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:57.642373" level="INFO">Opening url 'http://127.0.0.1:8000/viewstudents/'</msg>
+<arg>${BASE_URL}/viewstudents/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.642244" elapsed="0.057425"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.699902" elapsed="0.013182"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:57.728639" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${student_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.713269" elapsed="0.015419"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:57.728778" elapsed="0.000048"/>
+</return>
+<msg time="2025-10-18T13:57:57.729039" level="INFO">${scount} = 1</msg>
+<var>${scount}</var>
+<arg>S0000000000000000000000000</arg>
+<status status="PASS" start="2025-10-18T13:57:57.641955" elapsed="0.087193"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2025-10-18T13:57:57.730476" level="FAIL">Overlong Student ID was accepted (count=1)</msg>
+<arg>${seen} or ${scount} == 0</arg>
+<arg>msg=Overlong Student ID was accepted (count=${scount})</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2025-10-18T13:57:57.729616" elapsed="0.000986">Overlong Student ID was accepted (count=1)</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:57:57.869566" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.730996" elapsed="0.138852"/>
+</kw>
+<doc>Use 25-char StudentID → Expect rejected OR not shown in list</doc>
+<status status="FAIL" start="2025-10-18T13:57:53.827445" elapsed="4.042862">Overlong Student ID was accepted (count=1)</status>
+</test>
+<test id="s1-t13" name="TC_LIB_13: Verify case sensitivity in Book ID (Edge Case)" line="219">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.872117" elapsed="0.001335"/>
+</kw>
+<kw name="Ensure Book Listed">
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:57.875635" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.875474" elapsed="0.051002"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.926798" elapsed="0.035240"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:57.875081" elapsed="0.087209"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.962970" elapsed="0.013352"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.962637" elapsed="0.013818"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:57.991039" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.976656" elapsed="0.014468"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:57.991271" elapsed="0.000071"/>
+</return>
+<msg time="2025-10-18T13:57:57.991585" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${book_id}</arg>
+<status status="PASS" start="2025-10-18T13:57:57.874373" elapsed="0.117263"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${count} == 0</arg>
+<arg>Add Book</arg>
+<arg>${book_id}</arg>
+<arg>${book_name}</arg>
+<arg>${subject}</arg>
+<arg>${category}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.991850" elapsed="0.000294"/>
+</kw>
+<arg>${BOOK_ID}</arg>
+<arg>${BOOK_NAME}</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:57.873837" elapsed="0.118464"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:57.993526" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:57.993384" elapsed="0.040263"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.033861" elapsed="0.015137"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:57:57.993169" elapsed="0.055966"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.049451" elapsed="0.010400"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.049281" elapsed="0.010727"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:58.074868" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.060182" elapsed="0.014745"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:57:58.075022" elapsed="0.000050"/>
+</return>
+<msg time="2025-10-18T13:57:58.075269" level="INFO">${before} = 2</msg>
+<var>${before}</var>
+<arg>${BOOK_ID}</arg>
+<status status="PASS" start="2025-10-18T13:57:57.992797" elapsed="0.082505"/>
+</kw>
+<kw name="Add Book">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:58.077050" level="INFO">Opening url 'http://127.0.0.1:8000/addbook/'</msg>
+<arg>${BASE_URL}/addbook/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.076223" elapsed="0.048515"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Add Book</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.125203" elapsed="0.010644"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:58.136327" level="INFO">Typing text 'b101' into text field 'name:bookid'.</msg>
+<arg>name:bookid</arg>
+<arg>${book_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.136040" elapsed="0.138879"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:58.275636" level="INFO">Typing text 'Python Crash' into text field 'name:bookname'.</msg>
+<arg>name:bookname</arg>
+<arg>${book_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.275224" elapsed="0.135264"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:58.410923" level="INFO">Typing text 'CS' into text field 'name:subject'.</msg>
+<arg>name:subject</arg>
+<arg>${subject}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.410678" elapsed="0.105315"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:58.516918" level="INFO">Typing text 'Not-Issued' into text field 'name:category'.</msg>
+<arg>name:category</arg>
+<arg>${category}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.516370" elapsed="0.126176"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:57:58.642982" level="INFO">Clicking button 'xpath=//button[@type='submit'] | //input[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit'] | //input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.642759" elapsed="0.145383"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:58:04.043229" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T13:58:04.043393" level="FAIL">Location did not contain '/dashboard/' in 5 seconds.</msg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2025-10-18T13:57:58.789040" elapsed="5.255475">Location did not contain '/dashboard/' in 5 seconds.</status>
+</kw>
+<arg>Wait Until Location Contains</arg>
+<arg>/dashboard/</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:57:58.788557" elapsed="5.256098"/>
+</kw>
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:58:04.045495" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.045297" elapsed="0.053133"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.098638" elapsed="0.013669"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:58:04.044921" elapsed="0.067507"/>
+</kw>
+<arg>b101</arg>
+<arg>Python Crash</arg>
+<arg>${BOOK_SUBJECT}</arg>
+<arg>${BOOK_CATEGORY}</arg>
+<status status="PASS" start="2025-10-18T13:57:58.075835" elapsed="6.036661"/>
+</kw>
+<kw name="Book Count">
+<kw name="Go To Dashboard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:58:04.113674" level="INFO">Opening url 'http://127.0.0.1:8000/dashboard/'</msg>
+<arg>${BASE_URL}/dashboard/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.113533" elapsed="0.044785"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.158540" elapsed="0.010627"/>
+</kw>
+<status status="PASS" start="2025-10-18T13:58:04.113313" elapsed="0.056005"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.169822" elapsed="0.008750"/>
+</kw>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//table | //tbody | //div[contains(@class,'table')]</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.169510" elapsed="0.009182"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-10-18T13:58:04.188289" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>xpath=//td[normalize-space()='${book_id}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.178834" elapsed="0.009506"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-18T13:58:04.188542" elapsed="0.000089"/>
+</return>
+<msg time="2025-10-18T13:58:04.188974" level="INFO">${after} = 2</msg>
+<var>${after}</var>
+<arg>${BOOK_ID}</arg>
+<status status="PASS" start="2025-10-18T13:58:04.112879" elapsed="0.076164"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${after}</arg>
+<arg>${before}</arg>
+<arg>msg=Case-sensitive duplicate was added (before=${before}, after=${after})</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.189498" elapsed="0.000659"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-10-18T13:58:04.323053" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.190552" elapsed="0.132695"/>
+</kw>
+<doc>Add "b101" when "B101" exists → Expect treated as duplicate (total count remains 1)</doc>
+<status status="PASS" start="2025-10-18T13:57:57.871363" elapsed="6.452241"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-18T13:58:04.324842" elapsed="2.755313"/>
+</kw>
+<status status="FAIL" start="2025-10-18T13:57:11.790002" elapsed="55.290321"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Add Book Student" id="s1" pass="8" fail="5" skip="0">Add Book Student</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
